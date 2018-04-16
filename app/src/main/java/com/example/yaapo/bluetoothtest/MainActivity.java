@@ -213,6 +213,10 @@ public class MainActivity extends AppCompatActivity {
                                         @Override
                                         public void run() {
                                             // mStrDelimiter = '\n';
+                                            mTextBright.setText(data.substring(data.indexOf("cds",1), data.indexOf("/")));
+                                            mTextTemp.setText(data.substring(data.indexOf("temp",1), data.indexOf("/")));
+                                            mTextHumi.setText(data.substring(data.indexOf("soil",1), data.indexOf("/")));
+                                            mTextWTank.setText(data.substring(data.indexOf("water",1), data.indexOf("/")));
                                             mEditReceive.setText(mEditReceive.getText().toString() + data+ mStrDelimiter);
                                         }
 
